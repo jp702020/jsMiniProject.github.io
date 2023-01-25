@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #354f52;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+header {
+  /* background-color: #ddbea9; */
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.search {
+  background-color: transparent;
+  border: 2px solid #84a98c;
+  border-radius: 20px;
+  color: #84a98c;
+  padding: 0.5rem 1rem;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.search::placeholder {
+  color: #84a98c;
+}
+
+.search:focus {
+  background-color: #cad2c5;
+  color: #354f52;
+  outline: none;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie {
+  background-color: #ddbea9;
+  border-radius: 3px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  width: 250px;
+  margin: 1.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.movie img {
+  object-fit: cover;
+  height: 350px;
+  width: 100%;
+}
+
+.movie-info {
+  color: #354f52;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.movie-info span {
+  background-color: #b7b7a4;
+  padding: 0.25rem 0.5rem;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+.movie-info span.green {
+  color: #354f52;
+}
+
+.movie-info span.orange {
+  color: #354f52;
+}
+
+.movie-info span.red {
+  color: rgb(248, 8, 8);
+}
+
+.overview {
+  background-color: #cad2c5;
+  padding: 2rem;
+  position: absolute;
+  max-height: 80%;
+  overflow: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translateY(100%);
+  transition: ransform 0.3s ease-in;
+}
+
+.overview h4 {
+  margin-top: 0;
+}
+
+.movie:hover .overview {
+  transform: translateY(0);
+}
+
+.heading {
+  background-color: #84a98c;
+  color: #354f52;
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+}
+
+.releasedate {
+  color: #354f52;
+  font-size: 15px;
+  margin-left: 15px;
+}
+
+@media screen and (min-width: 576px) {
+  body {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  body {
+    grid-template-columns: 200px 1fr;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
